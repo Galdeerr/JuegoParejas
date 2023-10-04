@@ -1,17 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Juego de Parejas</title>
+    <title>Juego de Adivinar Parejas</title>
+    <link rel="stylesheet" href="index.css"> <!-- Enlaza el archivo CSS -->
 </head>
 <body>
-    <div class="score">Puntaje: 0</div>
-    <div class="timer">Tiempo: 0</div>
-    <div class="board" id="board">
-        <!-- Aquí van las cartas -->
+    <h1>Juego de Adivinar Parejas</h1>
+    <div id="score">Puntos: 0</div>
+
+    <div id="game-board">
+        <!-- Crea las tarjetas del juego -->
+        <!-- Agrega las imágenes y asigna un valor a data-card para cada carta -->
+        <div class="card" onclick="flipCard(this)" data-card="A">
+            <img src="carta.jpg" alt="A">
+            <div class="back">A</div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="A">
+            <img src="carta.jpg" alt="A">
+            <div class="back">A</div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="B">
+            <img src="carta.jpg" alt="B">
+            <div class="back">B</div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="B">
+            <img src="carta.jpg" alt="B">
+            <div class="back">B</div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="C">
+            <img src="carta.jpg" alt="C">
+            <div class="back">C</div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="C">
+            <img src="carta.jpg" alt="C">
+            <div class="back">C</div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="D">
+            <img src="carta.jpg" alt="D">
+            <div class="back">D</div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="D">
+            <img src="carta.jpg" alt="D">
+            <div class="back">D</div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="E">
+            <img src="carta.jpg" alt="E">
+            <div class="back">E</div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="E">
+            <img src="carta.jpg" alt="E">
+            <div class="back">E</div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="F">
+            <img src="carta.jpg" alt="F">
+            <div class="back">F</div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="F">
+            <img src="carta.jpg" alt="F">
+            <div class="back">F</div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="G">
+            <img src="carta.jpg" alt="G">
+            <div class="back">G</div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="G">
+            <img src="carta.jpg" alt="G">
+            <div class="back">G</div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="H">
+            <img src="carta.jpg" alt="H">
+            <div class="back">H</div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="H">
+            <img src="carta.jpg" alt="H">
+            <div class="back">H</div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="I">
+            <img src="carta.jpg" alt="I">
+            <div class="back">I</div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="I">
+            <img src="carta.jpg" alt="I">
+            <div class="back">I</div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="J">
+            <img src="carta.jpg" alt="J">
+            <div class="back">J</div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="J">
+            <img src="carta.jpg" alt="J">
+            <div class="back">J</div>
+        </div>
+        <!-- Agrega más tarjetas según sea necesario -->
     </div>
-    <script src="script.js"></script>
+
+    <script src="script.js"></script> <!-- Enlaza el archivo JavaScript -->
 </body>
 </html>
