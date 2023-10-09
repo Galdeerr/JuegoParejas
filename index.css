@@ -50,3 +50,19 @@ h1 {
 .card.flipped .back {
     transform: rotateY(0deg);
 }
+
+/* Ejemplo de media query */
+@media (max-width: 768px) {
+    /* Estilos para pantallas de 768px o menos */
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Estilos para pantallas de 768px a 1024px */
+}
+
+/* ... Agrega más media queries según sea necesario */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
