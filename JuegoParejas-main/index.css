@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('fotos/anoeta.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    color: #fff; /* Cambio de color de texto para que sea legible en el fondo */
+}
+
+h1 {
+    font-size: 48px;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+#score {
+    font-size: 24px;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+#game-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 150px;
+    height: 200px;
+    margin: 10px;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.card .front, .card .back {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card .front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f39c12;
+    backface-visibility: hidden;
+    color: #fff;
+    font-size: 24px;
+}
+
+.card .back {
+    background-color: #e74c3c;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.card.flipped .back {
+    transform: rotateY(0deg);
+}
+
+img {
+    max-width: 100%;
+    height: 200px;
+}
+#start-button, #reset-button {
+    padding: 15px 25px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+#start-button {
+    background-color: #2ecc71;
+}
+
+#start-button:hover {
+    background-color: #27ae60;
+}
+
+#reset-button {
+    background-color: #e74c3c;
+}
+
+#reset-button:hover {
+    background-color: #c0392b;
+}
+

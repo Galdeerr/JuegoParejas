@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Adivinar Parejas</title>
+    <link rel="stylesheet" href="index.css"> <!-- Enlaza el archivo CSS -->
+</head>
+<body>
+    <h1>Juego de Adivinar Parejas</h1>
+    <div id="score">Puntos: 0</div>
+
+    <button id="start-button" onclick="startGame()">Iniciar Juego</button>
+    <button id="reset-button" onclick="resetGame()">Reiniciar Juego</button>
+
+    <div id="game-board">
+        <!-- Crea las tarjetas del juego -->
+        <!-- Agrega las imágenes y asigna un valor a data-card para cada carta -->
+        <div class="card" onclick="flipCard(this)" data-card="A">
+            <img src="fotos/carta.jpg" alt="A">
+            <div class="back">
+                <img src="fotos/Atletico.png" alt="Reverso de la carta">
+            </div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="A">
+            <img src="fotos/carta.jpg" alt="A">
+            <div class="back">
+                <img src="fotos/Atletico.png" alt="Reverso de la carta">
+            </div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="B">
+            <img src="fotos/carta.jpg" alt="B">
+            <div class="back">
+                <img src="fotos/Barcelona.png" alt="Reverso de la carta">
+            </div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="B">
+            <img src="fotos/carta.jpg" alt="B">
+            <div class="back">
+                <img src="fotos/Barcelona.png" alt="Reverso de la carta">
+            </div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="C">
+            <img src="fotos/carta.jpg" alt="C">
+            <div class="back">
+                <img src="fotos/Betis.png" alt="Reverso de la carta">
+            </div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="C">
+            <img src="fotos/carta.jpg" alt="C">
+            <div class="back">
+                <img src="fotos/Betis.png" alt="Reverso de la carta">
+            </div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="D">
+            <img src="fotos/carta.jpg" alt="D">
+            <div class="back">
+                <img src="fotos/Bilbao.png" alt="Reverso de la carta">
+            </div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="D">
+            <img src="fotos/carta.jpg" alt="D">
+            <div class="back">
+                <img src="fotos/Bilbao.png" alt="Reverso de la carta">
+            </div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="E">
+            <img src="fotos/carta.jpg" alt="E">
+            <div class="back">
+                <img src="fotos/Osasuna.png" alt="Reverso de la carta">
+            </div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="E">
+            <img src="fotos/carta.jpg" alt="E">
+            <div class="back">
+                <img src="fotos/Osasuna.png" alt="Reverso de la carta">
+            </div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="F">
+            <img src="fotos/carta.jpg" alt="F">
+            <div class="back">
+                <img src="fotos/RealMadrid.png" alt="Reverso de la carta">
+            </div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="F">
+            <img src="fotos/carta.jpg" alt="F">
+            <div class="back">
+                <img src="fotos/RealMadrid.png" alt="Reverso de la carta">
+            </div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="G">
+            <img src="fotos/carta.jpg" alt="G">
+            <div class="back">
+                <img src="fotos/RealSociedad.png" alt="Reverso de la carta">
+            </div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="G">
+            <img src="fotos/carta.jpg" alt="G">
+            <div class="back">
+                <img src="fotos/RealSociedad.png" alt="Reverso de la carta">
+            </div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="H">
+            <img src="fotos/carta.jpg" alt="H">
+            <div class="back">
+                <img src="fotos/Sevilla.png" alt="Reverso de la carta">
+            </div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="H">
+            <img src="fotos/carta.jpg" alt="H">
+            <div class="back">
+                <img src="fotos/Sevilla.png" alt="Reverso de la carta">
+            </div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="I">
+            <img src="fotos/carta.jpg" alt="I">
+            <div class="back">
+                <img src="fotos/Valencia.png" alt="Reverso de la carta">
+            </div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="I">
+            <img src="fotos/carta.jpg" alt="I">
+            <div class="back">
+                <img src="fotos/Valencia.png" alt="Reverso de la carta">
+            </div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="J">
+            <img src="fotos/carta.jpg" alt="J">
+            <div class="back">
+                <img src="fotos/Villarreal.png" alt="Reverso de la carta">
+            </div>
+        </div>
+        <div class="card" onclick="flipCard(this)" data-card="J">
+            <img src="fotos/carta.jpg" alt="J">
+            <div class="back">
+                <img src="fotos/Villarreal.png" alt="Reverso de la carta">
+            </div>
+        </div>
+        <!-- Agrega más tarjetas según sea necesario -->
+    </div>
+    <script src="script.js"></script> <!-- Enlaza el archivo JavaScript -->
+</body>
+</html>
