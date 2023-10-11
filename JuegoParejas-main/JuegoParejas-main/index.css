@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('fotos/anoeta.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    color: #fff; /* Cambio de color de texto para que sea legible en el fondo */
+}
+
+h1 {
+    font-size: 48px;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+#score {
+    font-size: 24px;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+#game-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 150px;
+    height: 200px;
+    margin: 10px;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.card .front, .card .back {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card .front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f39c12;
+    backface-visibility: hidden;
+    color: #fff;
+    font-size: 24px;
+}
+
+.card .back {
+    background-color: #e74c3c;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.card.flipped .back {
+    transform: rotateY(0deg);
+}
+
+img {
+    max-width: 100%;
+    height: 200px;
+}
+
+/* Estilo para el botón de reinicio */
+#reset-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #2ecc71;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#reset-button:hover {
+    background-color: #27ae60;
+}
